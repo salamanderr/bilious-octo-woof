@@ -1,7 +1,9 @@
 package basic;
+
 /*
  * This is the main enemy object class. This is quite similar to the Player object, but with less options.
  */
+
 public class Enemy{
 	private int level;
 	private double damage;

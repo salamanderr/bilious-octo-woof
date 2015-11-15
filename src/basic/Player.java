@@ -7,6 +7,7 @@ package basic;
  * 
  * Created by @salamanderr 11/15/2015
  */
+
 public class Player{
 	private String name;
 	int level;
@@ -45,6 +46,9 @@ public class Player{
 	public int getGold(){
 		return gold;
 	}
+	public int getXP(){
+		return xp;
+	}
 	public void heal(double change){
 		health+= change;
 	}
@@ -70,5 +74,14 @@ public class Player{
 			level+= (xp / xpLevel);
 			xp=(xp / xpLevel);
 		}
+	}
+	public void loadSave(String name, int level, double dmg, double armr, double health, int xp, int gold){
+		this.name = name;
+		this.level = level;
+		this.dmg = dmg;
+		this.armr = armr;
+		this.health = health;
+		this.xp = xp;
+		this.gold = gold;
 	}
 }
