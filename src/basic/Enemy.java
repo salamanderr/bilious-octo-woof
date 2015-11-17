@@ -34,7 +34,7 @@ public class Enemy{
 	public int getXPValue(){
 		return xpValue;
 	}
-	public void takeDamage(int change){
+	public void takeDamage(double change){
 		health-= change;
 		/*
 		 * Same formula as the Player damage. For now this works.

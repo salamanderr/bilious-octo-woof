@@ -61,7 +61,7 @@ public class Player{
 	public void addGold(int change){
 		gold+= change;
 	}
-	public void takeDamage(int change){
+	public void takeDamage(double change){
 		if(armr < change)
 			health-= (change - armr);
 		/*
