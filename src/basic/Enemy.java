@@ -37,7 +37,7 @@ public class Enemy{
 	public void takeDamage(double change){
 		health-= change;
 		/*
-		 * Same formula as the Player damage. For now this works.
+		 * Same formula as the Player damage. Doesn't work. Idk.
 		 */
 	}
 }

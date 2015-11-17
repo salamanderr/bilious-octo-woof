@@ -1,7 +1,7 @@
 package basic;
 
 import resources.Reader;
-import resources.Writer;
+//import resources.Writer;
 import javax.swing.JOptionPane;
 import resources.ActionPane;
 /*
@@ -11,7 +11,7 @@ import resources.ActionPane;
 public class RUN{
 	public static void main(String[]args){
 		Reader con = new Reader();
-		Writer save = new Writer("D:\\Java\\bilious-octo-woof\\save.dat");
+		//Writer save = new Writer("D:\\Java\\bilious-octo-woof\\save.dat");
 		Reader saveReader = new Reader("D:\\Java\\bilious-octo-woof\\save.dat");
 		
 		ActionPane load = new ActionPane("Name Placeholder", "Choose an option to start").addPane("Load").addPane("New");
@@ -53,15 +53,17 @@ public class RUN{
 			ActionPane prompt = new ActionPane("Basic Menu", "Choose an option").addPane("Next Run").addPane("Stats").addPane("Armory").addPane("Quit");
 			prompt.run();
 			String input = prompt.getResult();
+			double restore = one.getHealth();
+			one.restoreHealth(restore);
 			
 			if(input.equalsIgnoreCase("Quit")){
-				save.print(one.getName() + " ");
-				save.print(one.getLevel() + " ");
-				save.print(one.getDamage() + " ");
-				save.print(one.getArmor() + " ");
-				save.print(one.getHealth() + " ");
-				save.print(one.getXP() + " ");
-				save.print(one.getGold());
+//				save.print(one.getName() + " ");
+//				save.print(one.getLevel() + " ");
+//				save.print(one.getDamage() + " ");
+//				save.print(one.getArmor() + " ");
+//				save.print(one.getHealth() + " ");
+//				save.print(one.getXP() + " ");
+//				save.print(one.getGold());
 				done = true;
 				/*
 				 * This should create a file called save.dat in the project folder, that can be read later for loading a game.
@@ -89,6 +91,7 @@ public class RUN{
 						}
 						if(a1.getHealth() > 0){
 							one.takeDamage(a1.getDamage());
+							System.out.println(one.getDamage()+ " "+ a1.getHealth());
 						}
 						if(one.getHealth() <= 0){
 							dead = true;

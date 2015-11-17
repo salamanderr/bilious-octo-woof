@@ -84,4 +84,7 @@ public class Player{
 		this.xp = xp;
 		this.gold = gold;
 	}
+	public void restoreHealth(double heal){
+		health = heal;
+	}
 }
